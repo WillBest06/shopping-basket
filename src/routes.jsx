@@ -1,5 +1,6 @@
 import { Navigate } from "react-router";
 import App from "./App";
+import Home from "./components/Home";
 
 const routes = [
   {
@@ -9,6 +10,10 @@ const routes = [
       {
         index: true,
         element: <Navigate to={"home"} replace />,
+      },
+      {
+        path: "home",
+        element: <Home />,
       },
     ],
   },

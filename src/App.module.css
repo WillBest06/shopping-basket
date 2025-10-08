@@ -1,0 +1,27 @@
+.site_header_nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav_menu {
+  display: flex;
+  width: fit-content;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav_link {
+  color: black;
+  font-family: sans-serif;
+  font-size: 2rem;
+  text-decoration: none;
+  user-select: none;
+}
+
+.nav_link.active {
+  text-decoration: underline;
+}
+
+.nav_link:hover {
+  opacity: 60%;
+}
