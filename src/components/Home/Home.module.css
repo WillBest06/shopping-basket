@@ -1,0 +1,17 @@
+* {
+  font-family: sans-serif;
+}
+
+.homeWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.newStockWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}

@@ -1,6 +1,6 @@
 .site_header_nav {
   display: flex;
-  justify-content: center;
+  justify-content: start;
 }
 
 .nav_menu {
@@ -8,6 +8,8 @@
   width: fit-content;
   gap: 2rem;
   list-style: none;
+  margin: 0;
+  padding: 1rem;
 }
 
 .nav_link {

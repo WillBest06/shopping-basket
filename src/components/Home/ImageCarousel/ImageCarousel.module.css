@@ -1,0 +1,37 @@
+.carouselWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  gap: 2rem;
+}
+
+.carouselImageWrapper {
+  width: 80%;
+}
+
+.carouselImage {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.carouselNavButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 3rem;
+  background-color: lightgray;
+  border: none;
+  opacity: 30%;
+  border-radius: 40rem;
+  padding: 1rem;
+  transition: all 0.5s ease;
+}
+
+.carouselNavButton:hover {
+  opacity: 90%;
+  transition: all 0.5s ease;
+}
