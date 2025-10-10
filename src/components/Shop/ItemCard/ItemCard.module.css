@@ -1,0 +1,67 @@
+button {
+  cursor: pointer;
+}
+
+.ItemWrapper {
+  outline: 1px solid black;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  height: fit-content;
+  justify-items: center;
+  overflow: hidden;
+}
+
+.ItemImage {
+  width: 100%;
+  height: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.ItemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quantityWrapper {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.qtyChangeBtn {
+  width: 20%;
+  font-size: 2rem;
+  padding: 0.5rem;
+  border: none;
+}
+
+.qtyInput {
+  width: 60%;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.qtyChangeBtn.plus {
+  background-color: green;
+}
+
+.qtyChangeBtn.minus {
+  background-color: red;
+}
+
+.qtyChangeBtn.plus,
+.qtyChangeBtn.minus {
+  color: white;
+}
+
+.AddToBasket {
+  width: fit-content;
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: #ffce12;
+}
