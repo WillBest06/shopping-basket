@@ -1,8 +1,35 @@
 import { useState } from "react";
 import styles from "./ItemCard.module.css";
+import { useOutletContext } from "react-router";
 
 function ItemCard({ item }) {
   const [quantity, setQuantity] = useState(0);
+  const [basketItems, setBasketItems] = useOutletContext();
+
+  const handleAddToBasket = (item) => {
+    if (quantity === 0) return null;
+
+    const itemIndex = basketItems.findIndex((element) => {
+      return element.id === item.id;
+    });
+
+    if (itemIndex !== -1) {
+      const newQuantity = basketItems[itemIndex].quantity + quantity;
+
+      const updatedItem = {
+        ...basketItems[itemIndex],
+        quantity: newQuantity,
+      };
+
+      setBasketItems((prev) => [
+        ...prev.slice(0, itemIndex),
+        updatedItem,
+        ...prev.slice(itemIndex + 1),
+      ]);
+    } else {
+      setBasketItems((prev) => [...prev, { id: item.id, quantity: quantity }]);
+    }
+  };
 
   const changeQuantity = (payload) => {
     if (typeof payload === "number") {
@@ -55,7 +82,12 @@ function ItemCard({ item }) {
             +
           </button>
         </div>
-        <button className={styles.AddToBasket}>Add to basket</button>
+        <button
+          className={styles.AddToBasket}
+          onClick={() => handleAddToBasket(item)}
+        >
+          Add to basket
+        </button>
       </div>
     </article>
   );
