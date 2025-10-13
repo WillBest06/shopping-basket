@@ -12,6 +12,10 @@
   padding: 1rem;
 }
 
+.nav_item {
+  position: relative;
+}
+
 .nav_link {
   color: black;
   font-family: sans-serif;
@@ -26,4 +30,14 @@
 
 .nav_link:hover {
   opacity: 60%;
+}
+
+.basketSize {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  background-color: red;
+  color: white;
+  padding: 0.25rem;
+  border-radius: 2rem;
 }
