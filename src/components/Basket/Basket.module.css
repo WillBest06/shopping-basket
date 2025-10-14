@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+.BasketWrapper {
+  background-color: #eaeded;
+  padding: 1rem;
+  min-height: calc(100dvh - 64.5px);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

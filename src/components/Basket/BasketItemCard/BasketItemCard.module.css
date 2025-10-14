@@ -1,0 +1,57 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+.BasketItemCardWrapper:first-child {
+  border-top: 1px solid grey;
+}
+
+.BasketItemCardWrapper {
+  width: 80%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: 2rem;
+  border-bottom: 1px solid grey;
+  background-color: white;
+}
+
+.ItemImage {
+  width: 180px;
+  height: 180px;
+  aspect-ratio: auto 180 / 180;
+  object-fit: contain;
+}
+
+.ItemActionsWrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.QuantityWrapper {
+  display: flex;
+  gap: 1rem;
+  outline: 3px solid #ffd814;
+  width: fit-content;
+  border-radius: 2rem;
+  padding: 0.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.QuantityWrapper > button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.ActionDelete {
+  background-color: transparent;
+  color: blue;
+  border: none;
+}
+
+.ActionDelete:hover {
+  text-decoration: underline;
+}
