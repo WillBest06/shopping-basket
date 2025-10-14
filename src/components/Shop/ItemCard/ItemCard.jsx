@@ -60,6 +60,7 @@ function ItemCard({ item }) {
       <div className={styles.ItemInfo}>
         <h2>{item.title}</h2>
         <div className={styles.DescWrapper}>
+          <p>£{item.price}</p>
           <p className={styles.ItemDesc}>{item.description}</p>
         </div>
         <div className={styles.quantityWrapper}>
