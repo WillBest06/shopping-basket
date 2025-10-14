@@ -18,7 +18,7 @@ function Home() {
       <section className={styles.newStockWrapper}>
         <ImageCarousel imgArr={carouselImgs}></ImageCarousel>
         <h2>Autumn comforts are calling</h2>
-        <Link to={"shop"}>Shop now</Link>
+        <Link to={"/shop"}>Shop now</Link>
       </section>
     </main>
   );
