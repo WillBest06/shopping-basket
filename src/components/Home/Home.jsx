@@ -14,7 +14,7 @@ function Home() {
 
   return (
     <main className={styles.homeWrapper}>
-      <h1>Welcome to T.K. Minn!</h1>
+      <h1>Welcome to TKWill!</h1>
       <section className={styles.newStockWrapper}>
         <ImageCarousel imgArr={carouselImgs}></ImageCarousel>
         <h2>Autumn comforts are calling</h2>
