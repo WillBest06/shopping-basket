@@ -8,11 +8,22 @@ function BasketItemCard({ item, handleQuantityChange, handleItemDelete }) {
         <h1>Item name: {item.title}</h1>
         <div className={styles.ItemActionsWrapper}>
           <div className={styles.QuantityWrapper}>
-            <button onClick={() => handleQuantityChange(item.id, -1)}>-</button>
+            <button
+              data-testid="decrement"
+              onClick={() => handleQuantityChange(item.id, -1)}
+            >
+              -
+            </button>
             <p>{item.quantity}</p>
-            <button onClick={() => handleQuantityChange(item.id, 1)}>+</button>
+            <button
+              data-testid="increment"
+              onClick={() => handleQuantityChange(item.id, 1)}
+            >
+              +
+            </button>
           </div>
           <button
+            data-testid="delete"
             className={styles.ActionDelete}
             onClick={() => handleItemDelete(item.id)}
           >
