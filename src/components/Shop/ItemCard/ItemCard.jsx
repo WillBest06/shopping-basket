@@ -54,7 +54,7 @@ function ItemCard({ item }) {
     }
   };
 
-  return (
+  return item.title !== null ? (
     <article className={styles.ItemWrapper}>
       <img className={styles.ItemImage} src={item.image} alt="" />
       <div className={styles.ItemInfo}>
@@ -75,6 +75,7 @@ function ItemCard({ item }) {
             type="tel"
             onChange={changeQuantity}
             value={quantity}
+            data-testid="quantity_input"
           />
           <button
             className={`${styles.qtyChangeBtn} ${styles.plus}`}
@@ -91,6 +92,8 @@ function ItemCard({ item }) {
         </button>
       </div>
     </article>
+  ) : (
+    <div>Sorry</div>
   );
 }
 
