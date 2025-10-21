@@ -16,7 +16,7 @@ function Home() {
     <main className={styles.homeWrapper}>
       <h1>Welcome to TKWill!</h1>
       <section className={styles.newStockWrapper}>
-        <ImageCarousel imgArr={carouselImgs}></ImageCarousel>
+        <ImageCarousel images={carouselImgs}></ImageCarousel>
         <h2>Autumn comforts are calling</h2>
         <Link to={"/shop"}>Shop now</Link>
       </section>
