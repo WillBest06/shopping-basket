@@ -1,23 +1,23 @@
 import { useState } from "react";
 import styles from "./ImageCarousel.module.css";
 
-function ImageCarousel({ imgArr }) {
+function ImageCarousel({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleChangeImage = (delta) => {
-    if (imgArr.length === 1) return;
+    if (images.length === 1) return;
 
-    if (currentIndex === imgArr.length - 1 && delta === 1) {
+    if (currentIndex === images.length - 1 && delta === 1) {
       setCurrentIndex(0);
     } else if (currentIndex === 0 && delta === -1) {
-      setCurrentIndex(imgArr.length - 1);
+      setCurrentIndex(images.length - 1);
     } else {
       setCurrentIndex((prev) => prev + delta);
     }
   };
 
   return (
-    <div className={styles.carouselWrapper}>
+    <div data-testid="image_carousel" className={styles.carouselWrapper}>
       <button
         className={styles.carouselNavButton}
         onClick={() => handleChangeImage(-1)}
@@ -26,8 +26,9 @@ function ImageCarousel({ imgArr }) {
       </button>
       <div className={styles.carouselImageWrapper}>
         <img
+          data-testid="image_element"
           className={styles.carouselImage}
-          src={imgArr[currentIndex]["url"]}
+          src={images[currentIndex]["url"]}
           alt=""
         />
       </div>
